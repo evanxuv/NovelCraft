@@ -1,0 +1,35 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Java / Spring Boot
+target/
+build/
+out/
+.gradle/
+
+# Node / Vue
+node_modules/
+dist/
+coverage/
+.vite/
+
+# Local runtime
+*.pid
+*.seed
+*.local
+
