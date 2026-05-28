@@ -4,11 +4,6 @@ server:
 spring:
   application:
     name: novelcraft-backend
-  datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:novelcraft}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: ${MYSQL_USERNAME:novelcraft}
-    password: ${MYSQL_PASSWORD:novelcraft}
-    driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     enabled: false
   ai:

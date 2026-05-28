@@ -27,10 +27,19 @@ mvn -s ..\.mvn\settings.xml test
 mvn -s ..\.mvn\settings.xml spring-boot:run
 ```
 
+Run with the development profile and MySQL/Flyway enabled:
+
+```bash
+cd backend
+mvn -s ..\.mvn\settings.xml spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
 Useful endpoints:
 
 - `GET /api/health`
 - `GET /api/generation/demo/stream`
+
+Database migrations live in `backend/src/main/resources/db/migration`.
 
 ## Frontend
 
