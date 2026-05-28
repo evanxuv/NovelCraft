@@ -1,0 +1,34 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: novelcraft-backend
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:novelcraft}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: ${MYSQL_USERNAME:novelcraft}
+    password: ${MYSQL_PASSWORD:novelcraft}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: false
+  ai:
+    openai-sdk:
+      api-key: ${OPENAI_API_KEY:}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com}
+      chat:
+        options:
+          model: ${NOVELCRAFT_AI_MODEL:gpt-4.1-mini}
+          temperature: ${NOVELCRAFT_AI_TEMPERATURE:0.8}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+novelcraft:
+  ai:
+    provider: openai-compatible
+    model: ${NOVELCRAFT_AI_MODEL:gpt-4.1-mini}
+    temperature: ${NOVELCRAFT_AI_TEMPERATURE:0.8}
+    max-tokens: ${NOVELCRAFT_AI_MAX_TOKENS:4096}

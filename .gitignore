@@ -21,15 +21,21 @@ target/
 build/
 out/
 .gradle/
+.m2/
 
 # Node / Vue
 node_modules/
 dist/
 coverage/
 .vite/
+.npm-cache/
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/vitest.config.js
+frontend/vitest.config.d.ts
 
 # Local runtime
 *.pid
 *.seed
 *.local
-
